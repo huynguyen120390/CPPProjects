@@ -15,7 +15,6 @@ using std::sort;
 enum class State {kEmpty, kObstacle,kClosed,kPath};
 const int delta[4][2]{{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
 
-
 vector<State> ParseLine(string line) {
     istringstream sline(line);
     int n;
@@ -30,7 +29,6 @@ vector<State> ParseLine(string line) {
     }
     return row;
 }
-
 
 vector<vector<State>> ReadBoardFile(string path) {
   ifstream myfile (path);
@@ -85,6 +83,7 @@ vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2
         if (x_init == x_goal && y_init == y_goal){
             return grid;
         }
+        ExpandNeighbors(current,open,grid,goal);
 
     }
 
@@ -93,7 +92,7 @@ vector<vector<State>> Search(vector<vector<State>> grid, int init[2], int goal[2
 }
 
 
-void ExpandNeighbors(vector<int> current, vector<vector<int>> *open, vector<vector<State>> grid, int goal[2]){
+void ExpandNeighbors(vector<int> &current, vector<vector<int>> &open, vector<vector<State>> &grid, int goal[2]){
     int x = current[0];
     int y = current[1];
     int g = current[2] + 1;
@@ -103,11 +102,11 @@ void ExpandNeighbors(vector<int> current, vector<vector<int>> *open, vector<vect
     int h;
     vector<int> neighborNode;
     for(int r = 0; r < 4; r++){
-        neighbor_x = delta[r][0];
-        neighbor_y = delta[r][1];
+        neighbor_x = x + delta[r][0];
+        neighbor_y = y + delta[r][1];
         if (CheckValidCell(neighbor_x,neighbor_y,grid)){
             h = Heuristic(neighbor_x,neighbor_y,goal_x,goal_y);
-            AddToOpen(neighbor_x,neighbor_y,g,h,*open,grid);
+            AddToOpen(neighbor_x,neighbor_y,g,h,open,grid);
         }
     }
 }

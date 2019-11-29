@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/huynguyen/CodeLab/GitProjects/CppProjects/CMakeBasics/FirstCMake/src/increment_and_sum.cpp
+vect_add_one.h
+/Users/huynguyen/CodeLab/GitProjects/CppProjects/CMakeBasics/FirstCMake/src/vect_add_one.h
+
+/Users/huynguyen/CodeLab/GitProjects/CppProjects/CMakeBasics/FirstCMake/src/increment_and_sum.h
+vector
+-
+
+/Users/huynguyen/CodeLab/GitProjects/CppProjects/CMakeBasics/FirstCMake/src/main.cpp
+iostream
+-
+vector
+-
+increment_and_sum.h
+/Users/huynguyen/CodeLab/GitProjects/CppProjects/CMakeBasics/FirstCMake/src/increment_and_sum.h
+
+/Users/huynguyen/CodeLab/GitProjects/CppProjects/CMakeBasics/FirstCMake/src/vect_add_one.cpp
+vect_add_one.h
+/Users/huynguyen/CodeLab/GitProjects/CppProjects/CMakeBasics/FirstCMake/src/vect_add_one.h
+
+/Users/huynguyen/CodeLab/GitProjects/CppProjects/CMakeBasics/FirstCMake/src/vect_add_one.h
+vector
+-
+
