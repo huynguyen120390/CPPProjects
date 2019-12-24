@@ -1,6 +1,8 @@
 #include <assert.h>
 #include <cmath>
+#include <iostream>
 
+using namespace std;
 // TODO: Define PI
 #define PI 3.141592
 
@@ -57,4 +59,5 @@ int main() {
   assert(particle.x != bicycle.x);
   assert(particle.y != bicycle.y);
   assert(particle.theta != bicycle.theta);
+  cout << "Hello";
 }
