@@ -59,5 +59,4 @@ int main() {
   assert(particle.x != bicycle.x);
   assert(particle.y != bicycle.y);
   assert(particle.theta != bicycle.theta);
-  cout << "Hello";
 }
