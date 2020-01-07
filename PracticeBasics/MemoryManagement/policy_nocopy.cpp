@@ -16,6 +16,9 @@ class NoCopyClass2{
         NoCopyClass2(const NoCopyClass2 &) = delete;
         NoCopyClass2 &operator=(const NoCopyClass2 &) = delete;
 };
+class Class3{
+
+};
 
 int main(){
     //The following code are caught by editor , so just comment out , but usable to understand NoCopy Policy
@@ -26,6 +29,9 @@ int main(){
     //NoCopyClass2 original2;
     //NoCopyClass2 copy2a(original2); //error:use of deleted function ‘NoCopyClass2::NoCopyClass2(const NoCopyClass2&)’
     //NoCopyClass2 copy2b= original2; //error:use of deleted function ‘NoCopyClass2::NoCopyClass2(const NoCopyClass2&)’
+
+    //Class3 class3;
+   // NoCopyClass1 original1(class3); //cant copy different class 
     return 0; 
 }
 
