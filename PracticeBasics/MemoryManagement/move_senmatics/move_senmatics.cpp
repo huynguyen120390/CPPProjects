@@ -18,9 +18,11 @@ class MyMoveableClass{
             *data = *source.data;
         }
         MyMoveableClass &operator=(const MyMoveableClass &source){
+            //self-assignment protection
             if(this == &source){
                 return *this;
             }
+            //copy source data to current object
             delete[] data;
             data = new int[source.size];
             *data = *source.data;
