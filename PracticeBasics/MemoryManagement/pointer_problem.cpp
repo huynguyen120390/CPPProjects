@@ -38,3 +38,5 @@ int *f3(void)
     *px = 10;
     return px; //memory leak
 }
+
+

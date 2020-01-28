@@ -36,7 +36,7 @@ int main()
     MyClass *p = new MyClass[3]();
     delete[] p;
     
-    MyClass *p2 = new MyClass[1000]();
+    MyClass *p2 = new MyClass[10]();
     delete[] p2;
 }
 
