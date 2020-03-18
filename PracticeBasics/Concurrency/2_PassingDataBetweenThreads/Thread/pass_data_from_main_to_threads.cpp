@@ -16,7 +16,7 @@ int main(){
     //start thread using a Lambda
     std::thread t2([message]{
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
-        std::cout << "Thread 2" << message << std::endl;
+        std::cout << "Thread 2 " << message << std::endl;
     });
 
     //thread barrier
