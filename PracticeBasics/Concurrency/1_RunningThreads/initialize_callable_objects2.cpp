@@ -20,4 +20,6 @@ int main(){
     t3.join();
     std::cout << "Finished work in main\n";
     return 0;
+
+    
 }

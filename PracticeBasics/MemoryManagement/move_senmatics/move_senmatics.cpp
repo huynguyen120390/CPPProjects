@@ -29,11 +29,8 @@ class MyMoveableClass{
         }
 
 };
-
-
 int main(){
     MyMoveableClass mo1(10);
     MyMoveableClass mo2(mo1);
     MyMoveableClass mo3 = mo1;
-
 }

@@ -20,7 +20,7 @@ int main()
     // create thread
     std::shared_ptr<Vehicle> v(new Vehicle);
     std::thread t = std::thread(&Vehicle::addID, v, 1); // call member function on object v
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    
     
     // wait for thread to finish
     t.join();

@@ -9,7 +9,6 @@ void raw_pointer(){
     *raw = 22;
     //delete the resource again
     delete raw;
-
 }
 
 void unique_pointer(){
