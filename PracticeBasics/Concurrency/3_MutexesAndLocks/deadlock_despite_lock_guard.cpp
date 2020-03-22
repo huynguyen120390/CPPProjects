@@ -1,3 +1,4 @@
+//Avoid as much as possible nested lock or mutiple locks to avoid interlock
 #include <iostream>
 #include <thread>
 #include <mutex>

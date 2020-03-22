@@ -22,7 +22,7 @@ void ThreadA()
     mutex2.unlock();
     mutex1.unlock();
 
-    //The follow solves 
+    //The following solves 
     //mutex1.lock();
     //std::cout << "Thread A" << std::endl;
     //mutex2.lock();

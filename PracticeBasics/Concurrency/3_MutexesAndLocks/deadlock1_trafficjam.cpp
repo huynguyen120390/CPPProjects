@@ -18,7 +18,7 @@ void printResult(int denom)
 
 void divideByNumber(double num, double denom)
 {   
-    mtx.lock();
+    //mtx.lock(); //LOCK
     try
     {   
        
@@ -32,7 +32,7 @@ void divideByNumber(double num, double denom)
         }
         else
         {  
-            mtx.unlock();
+            //mtx.unlock(); //UNLOCK THE RESOURCE FOR OTHER THREAD BEFORE THROWING AN EXCEPTION
             throw std::invalid_argument("Exception from thread: Division by zero!");
         }
     }
@@ -42,7 +42,7 @@ void divideByNumber(double num, double denom)
         std::cout << e.what() << std::endl;
         return; 
     }
-    mtx.unlock();
+    //mtx.unlock(); //UNLOCK
 }
 
 int main()

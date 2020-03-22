@@ -30,9 +30,9 @@ public:
     // typical behaviour methods
     void pushBack(Vehicle &&v)
     {
-        _mutex.lock();
+        _mutex.lock(); //LOCK RESOUCE
         _vehicles.emplace_back(std::move(v)); // data race would cause an exception
-        _mutex.unlock();
+        _mutex.unlock(); //UNLOCK RESOURCE
     }
 
 private:
